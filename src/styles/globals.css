@@ -41,21 +41,3 @@ a {
   }
 }
 
-/* styles/globals.css */
-.video-container {
-  width: 100%;
-  height: 100vh; /* Полноэкранный режим по высоте */
-}
-
-/* Для горизонтального режима */
-.video-container.horizontal {
-  width: 100vw; /* Полноэкранный режим по ширине */
-  height: auto;
-}
-
-/* Для вертикального режима */
-.video-container.vertical {
-  width: auto;
-  height: 100vh;
-}
-
