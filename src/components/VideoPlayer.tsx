@@ -30,9 +30,10 @@
 // export default VideoPlayer;
 
 import React from 'react';
-import ReactPlayer from 'react-player';
+
 import dynamic from 'next/dynamic';
 const KinescopePlayer = dynamic(() => import('@kinescope/react-kinescope-player'), { ssr: false });
+const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
 type Props = {
     url: string;
