@@ -30,10 +30,10 @@
 // export default VideoPlayer;
 
 import React from 'react';
-
+import ReactPlayer from 'react-player';
 import dynamic from 'next/dynamic';
 const KinescopePlayer = dynamic(() => import('@kinescope/react-kinescope-player'), { ssr: false });
-const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
+// const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
 type Props = {
     url: string;
@@ -44,7 +44,7 @@ type Props = {
 const VideoPlayer = ({ url }: Props) => {
     const isKinescopeVideo = url.includes('kinescope.io');
 
-    const extractKinescopeVideoId = (url: any) => {
+    const extractKinescopeVideoId = (url: string) => {
         const regex = /kinescope\.io\/(.+)/;
         const match = url.match(regex);
         return match ? match[1] : null;
